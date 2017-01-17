@@ -58,44 +58,16 @@
                 "title": "lowerFirst"
             },
             {
-                "command": "pad",
-                "title": "pad"
-            },
-            {
-                "command": "padEnd",
-                "title": "padEnd"
-            },
-            {
-                "command": "padStart",
-                "title": "padStart"
-            },
-            {
                 "command": "parseInt",
                 "title": "parseInt"
-            },
-            {
-                "command": "repeat",
-                "title": "repeat"
-            },
-            {
-                "command": "replace",
-                "title": "replace"
             },
             {
                 "command": "snakeCase",
                 "title": "snakeCase"
             },
             {
-                "command": "split",
-                "title": "split"
-            },
-            {
                 "command": "startCase",
                 "title": "startCase"
-            },
-            {
-                "command": "template",
-                "title": "template"
             },
             {
                 "command": "toLower",
@@ -118,10 +90,6 @@
                 "title": "trimStart"
             },
             {
-                "command": "truncate",
-                "title": "truncate"
-            },
-            {
                 "command": "unescape",
                 "title": "unescape"
             },
@@ -132,10 +100,6 @@
             {
                 "command": "upperFirst",
                 "title": "upperFirst"
-            },
-            {
-                "command": "words",
-                "title": "words"
             }
         ]
     },
