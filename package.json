@@ -1,0 +1,158 @@
+{
+  "name": "string-converter",
+  "displayName": "String Converter",
+  "version": "0.0.1",
+  "icon": "images/icon.svg",
+  "description": "We know and love lodash. Why not use the string converting functions in vscode?",
+  "publisher": "adamwalzer",
+  "author": {
+    "name": "Adam Walzer"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "vscode": "^1.5.0"
+  },
+  "categories": [
+    "Formatters"
+  ],
+  "license": "MIT",
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "camelCase",
+        "title": "camelCase"
+      },
+      {
+        "command": "capitalize",
+        "title": "capitalize"
+      },
+      {
+        "command": "deburr",
+        "title": "deburr"
+      },
+      {
+        "command": "escape",
+        "title": "escape"
+      },
+      {
+        "command": "escapeRegExp",
+        "title": "escapeRegExp"
+      },
+      {
+        "command": "kebabCase",
+        "title": "kebabCase"
+      },
+      {
+        "command": "lowerCase",
+        "title": "lowerCase"
+      },
+      {
+        "command": "lowerFirst",
+        "title": "lowerFirst"
+      },
+      {
+        "command": "pad",
+        "title": "pad"
+      },
+      {
+        "command": "padEnd",
+        "title": "padEnd"
+      },
+      {
+        "command": "padStart",
+        "title": "padStart"
+      },
+      {
+        "command": "parseInt",
+        "title": "parseInt"
+      },
+      {
+        "command": "repeat",
+        "title": "repeat"
+      },
+      {
+        "command": "replace",
+        "title": "replace"
+      },
+      {
+        "command": "snakeCase",
+        "title": "snakeCase"
+      },
+      {
+        "command": "split",
+        "title": "split"
+      },
+      {
+        "command": "startCase",
+        "title": "startCase"
+      },
+      {
+        "command": "template",
+        "title": "template"
+      },
+      {
+        "command": "toLower",
+        "title": "toLower"
+      },
+      {
+        "command": "toUpper",
+        "title": "toUpper"
+      },
+      {
+        "command": "trim",
+        "title": "trim"
+      },
+      {
+        "command": "trimEnd",
+        "title": "trimEnd"
+      },
+      {
+        "command": "trimStart",
+        "title": "trimStart"
+      },
+      {
+        "command": "truncate",
+        "title": "truncate"
+      },
+      {
+        "command": "unescape",
+        "title": "unescape"
+      },
+      {
+        "command": "upperCase",
+        "title": "upperCase"
+      },
+      {
+        "command": "upperFirst",
+        "title": "upperFirst"
+      },
+      {
+        "command": "words",
+        "title": "words"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^2.0.3",
+    "vscode": "^1.0.0",
+    "mocha": "^2.3.3",
+    "@types/node": "^6.0.40",
+    "@types/mocha": "^2.2.32"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}
