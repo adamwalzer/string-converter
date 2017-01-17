@@ -9,33 +9,33 @@ import {
 
 const _ = require('lodash');
 
-const stringFunctionNames = [
-    'camelCase',
-    'capitalize',
-    'deburr',
-    'escape',
-    'escapeRegExp',
-    'kebabCase',
-    'lowerCase',
-    'lowerFirst',
-    // 'pad',
-    // 'padEnd',
-    // 'padStart',
-    'parseInt',
-    // 'repeat',
-    // 'replace',
-    'snakeCase',
-    // 'split',
-    'startCase',
-    'toLower',
-    'toUpper',
-    'trim',
-    'trimEnd',
-    'trimStart',
-    'unescape',
-    'upperCase',
-    'upperFirst',
-    // 'words',
+const stringFunctions = [
+    _.camelCase,
+    _.capitalize,
+    _.deburr,
+    _.escape,
+    _.escapeRegExp,
+    _.kebabCase,
+    _.lowerCase,
+    _.lowerFirst,
+    // _.pad,
+    // _.padEnd,
+    // _.padStart,
+    _.parseInt,
+    // _.repeat,
+    // _.replace,
+    _.snakeCase,
+    // _.split,
+    _.startCase,
+    _.toLower,
+    _.toUpper,
+    _.trim,
+    _.trimEnd,
+    _.trimStart,
+    _.unescape,
+    _.upperCase,
+    _.upperFirst,
+    // _.words,
 ];
 
 const convertStrings = function(fn) {
@@ -43,19 +43,12 @@ const convertStrings = function(fn) {
 
     if (!editor) return;
 
-    const selections = editor.selections;
-
-    const selectedStrings = _.map(selections, selection =>
-        editor.document.getText(new Range(selection.start, selection.end))
-    );
-
-    const transformedStrings = _.map(selectedStrings, selectedString =>
-        fn(selectedString)
-    );
-
     editor.edit(editBuilder => {
-        _.each(selections, (selection, k) => {
-            editBuilder.replace(selection, transformedStrings[k]);
+        _.each(editor.selections, selection => {
+            editBuilder.replace(
+                selection,
+                fn(editor.document.getText(new Range(selection.start, selection.end)))
+            );
         });
     });
 };
@@ -63,8 +56,10 @@ const convertStrings = function(fn) {
 // This method is called when your extension is activated. Activation is
 // controlled by the activation events defined in package.json.
 export function activate(context: ExtensionContext) {
-    _.each(stringFunctionNames, fn => {
-        context.subscriptions.push(commands.registerCommand(fn, convertStrings.bind(null, _[fn])));
+    _.each(stringFunctions, fn => {
+        context.subscriptions.push(
+            commands.registerCommand(fn, convertStrings.bind(null, fn))
+        );
     });
 }
 
