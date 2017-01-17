@@ -24,6 +24,7 @@ The lodash string functions implimented in this extension are:
 - unescape
 - upperCase
 - upperFirst
+- words
 
 ## Requirements
 
