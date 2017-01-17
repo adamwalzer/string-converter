@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to the "String Converter" extension will be documented in this file.
 
+### [0.0.6]
+
+Adding in the `words` function.
+
 ### [0.0.5]
 
 Just updating the documentation a little.

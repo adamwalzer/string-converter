@@ -39,6 +39,10 @@ At this time there are no known issues with this extension as it has been tested
 
 ## Release Notes
 
+### 0.0.6
+
+Adding in the `words` function.
+
 ### 0.0.5
 
 Just updating the documentation a little.

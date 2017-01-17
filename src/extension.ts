@@ -35,7 +35,7 @@ const stringFunctionNames = [
     'unescape',
     'upperCase',
     'upperFirst',
-    // 'words',
+    'words',
 ];
 
 const convertStrings = function(fn) {
@@ -47,7 +47,7 @@ const convertStrings = function(fn) {
         _.each(editor.selections, selection => {
             editBuilder.replace(
                 selection,
-                fn(editor.document.getText(new Range(selection.start, selection.end)))
+                fn(editor.document.getText(new Range(selection.start, selection.end))).toString()
             );
         });
     });
