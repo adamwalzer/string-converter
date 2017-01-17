@@ -3,15 +3,8 @@
 import {
     window,
     commands,
-    workspace,
-    Disposable,
     ExtensionContext,
-    StatusBarAlignment,
-    StatusBarItem,
-    TextDocument,
     Range,
-    DecorationOptions,
-    OverviewRulerLane,
 } from 'vscode';
 
 const _ = require('lodash');
