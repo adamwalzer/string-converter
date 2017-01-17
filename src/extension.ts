@@ -52,11 +52,11 @@ const convertStrings = function(fn) {
 
     const selections = editor.selections;
 
-    let selectedStrings = _.map(selections, selection =>
+    const selectedStrings = _.map(selections, selection =>
         editor.document.getText(new Range(selection.start, selection.end))
     );
 
-    let transformedStrings = _.map(selectedStrings, selectedString =>
+    const transformedStrings = _.map(selectedStrings, selectedString =>
         fn(selectedString)
     );
 
@@ -71,7 +71,7 @@ const convertStrings = function(fn) {
 // controlled by the activation events defined in package.json.
 export function activate(context: ExtensionContext) {
     _.each(stringFunctionNames, fn => {
-        context.subscriptions.push(commands.registerCommand(fn, convertStrings.bind(_[fn])));
+        context.subscriptions.push(commands.registerCommand(fn, convertStrings.bind(null, _[fn])));
     });
 }
 

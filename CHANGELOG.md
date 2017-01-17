@@ -1,6 +1,14 @@
 # Change Log
 All notable changes to the "String Converter" extension will be documented in this file.
 
+### [0.0.3]
+
+Fixing error.
+
+### [0.0.2]
+
+Adding the git repo to the package.json.
+
 ## [0.0.1]
 - The following lodash string functions were implimented in this extension:
 -- camelCase
