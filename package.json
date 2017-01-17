@@ -1,7 +1,7 @@
 {
     "name": "string-converter",
     "displayName": "String Converter",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "icon": "images/icon.svg",
     "description": "We know and love lodash. Why not use the string converting functions in vscode?",
     "publisher": "adamwalzer",
