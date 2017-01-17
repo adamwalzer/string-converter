@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/adamwalzer/string-converter"
   },
   "engines": {
     "vscode": "^1.5.0"

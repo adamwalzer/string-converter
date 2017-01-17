@@ -39,6 +39,10 @@ At this time there are no known issues with this extension as it has been tested
 
 ## Release Notes
 
+### 0.0.2
+
+Adding the git repo to the package.json.
+
 ### 0.0.1
 
 This is the initial release of this extension. As far as I know it should work for all of these functions.
