@@ -58,7 +58,8 @@ const convertStrings = function(fn) {
 export function activate(context: ExtensionContext) {
     _.each(stringFunctionNames, fn => {
         context.subscriptions.push(
-            commands.registerCommand(fn, convertStrings.bind(null, _[fn])));
+            commands.registerCommand(fn, convertStrings.bind(null, _[fn]))
+        );
     });
 }
 
