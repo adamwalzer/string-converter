@@ -1,6 +1,6 @@
 {
     "name": "string-converter",
-    "displayName": "String Converter",
+    "displayName": "Text Manipulator",
     "version": "0.0.6",
     "icon": "images/icon.svg",
     "description": "We know and love lodash. Why not use the string converting functions in vscode?",
