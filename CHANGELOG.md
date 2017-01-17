@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to the "String Converter" extension will be documented in this file.
 
+### [0.0.4]
+
+Removing unused commands.
+
 ### [0.0.3]
 
 Fixing error.

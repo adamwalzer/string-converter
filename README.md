@@ -39,6 +39,10 @@ At this time there are no known issues with this extension as it has been tested
 
 ## Release Notes
 
+### 0.0.4
+
+Removing unused commands.
+
 ### 0.0.3
 
 Fixing error.
