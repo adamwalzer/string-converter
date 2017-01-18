@@ -6,15 +6,15 @@ We know and love lodash. Why not use its string converting functions in vscode?
 
 The lodash string functions implimented in this extension are:
 
-1. camelCase
-2. capitalize
-3. deburr
-4. escape
-5. escapeRegExp
-6. kebabCase
-7. lowerCase
-8. lowerFirst
-9. parseInt
+1.  camelCase
+2.  capitalize
+3.  deburr
+4.  escape
+5.  escapeRegExp
+6.  kebabCase
+7.  lowerCase
+8.  lowerFirst
+9.  parseInt
 10. snakeCase
 11. startCase
 12. toLower
