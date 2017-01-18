@@ -5,6 +5,7 @@ We know and love lodash. Why not use its string converting functions in vscode?
 ## Features
 
 The lodash string functions implimented in this extension are:
+
 1. camelCase
 2. capitalize
 3. deburr
