@@ -1,4 +1,4 @@
-# STRING CONVERTER README
+# TEXT MANIPULATOR README
 
 We know and love lodash. Why not use its string converting functions in vscode?
 
@@ -42,6 +42,10 @@ This extension does not currently take any settings. Simply install it, and it w
 At this time there are no known issues with this extension as it has been tested very limitedly.
 
 ## Release Notes
+
+### 0.0.7
+
+Adding the demo gif and 'Text Manipulator' prefix.
 
 ### 0.0.6
 
