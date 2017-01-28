@@ -2,6 +2,8 @@
 
 We know and love lodash. Why not use its string converting functions in vscode?
 
+![Alt text](images/demo.gif?raw=true "Demo Gif")
+
 ## Features
 
 The lodash string functions implimented in this extension are:

@@ -27,83 +27,83 @@
         "commands": [
             {
                 "command": "camelCase",
-                "title": "camelCase"
+                "title": "Text Manipulator: camelCase"
             },
             {
                 "command": "capitalize",
-                "title": "capitalize"
+                "title": "Text Manipulator: capitalize"
             },
             {
                 "command": "deburr",
-                "title": "deburr"
+                "title": "Text Manipulator: deburr"
             },
             {
                 "command": "escape",
-                "title": "escape"
+                "title": "Text Manipulator: escape"
             },
             {
                 "command": "escapeRegExp",
-                "title": "escapeRegExp"
+                "title": "Text Manipulator: escapeRegExp"
             },
             {
                 "command": "kebabCase",
-                "title": "kebabCase"
+                "title": "Text Manipulator: kebabCase"
             },
             {
                 "command": "lowerCase",
-                "title": "lowerCase"
+                "title": "Text Manipulator: lowerCase"
             },
             {
                 "command": "lowerFirst",
-                "title": "lowerFirst"
+                "title": "Text Manipulator: lowerFirst"
             },
             {
                 "command": "parseInt",
-                "title": "parseInt"
+                "title": "Text Manipulator: parseInt"
             },
             {
                 "command": "snakeCase",
-                "title": "snakeCase"
+                "title": "Text Manipulator: snakeCase"
             },
             {
                 "command": "startCase",
-                "title": "startCase"
+                "title": "Text Manipulator: startCase"
             },
             {
                 "command": "toLower",
-                "title": "toLower"
+                "title": "Text Manipulator: toLower"
             },
             {
                 "command": "toUpper",
-                "title": "toUpper"
+                "title": "Text Manipulator: toUpper"
             },
             {
                 "command": "trim",
-                "title": "trim"
+                "title": "Text Manipulator: trim"
             },
             {
                 "command": "trimEnd",
-                "title": "trimEnd"
+                "title": "Text Manipulator: trimEnd"
             },
             {
                 "command": "trimStart",
-                "title": "trimStart"
+                "title": "Text Manipulator: trimStart"
             },
             {
                 "command": "unescape",
-                "title": "unescape"
+                "title": "Text Manipulator: unescape"
             },
             {
                 "command": "upperCase",
-                "title": "upperCase"
+                "title": "Text Manipulator: upperCase"
             },
             {
                 "command": "upperFirst",
-                "title": "upperFirst"
+                "title": "Text Manipulator: upperFirst"
             },
             {
                 "command": "words",
-                "title": "words"
+                "title": "Text Manipulator: words"
             }
         ]
     },
