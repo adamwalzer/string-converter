@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to the "String Converter" extension will be documented in this file.
 
+### [0.0.7]
+
+Adding the demo gif and 'Text Manipulator' prefix.
+
 ### [0.0.6]
 
 Adding in the `words` function.
