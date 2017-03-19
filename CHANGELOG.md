@@ -1,5 +1,9 @@
 # Change Log
-All notable changes to the "String Converter" extension will be documented in this file.
+All notable changes to the "Text Manipulator" extension will be documented in this file.
+
+### [0.0.8]
+
+Adding a bunch more functions!
 
 ### [0.0.7]
 

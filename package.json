@@ -1,9 +1,9 @@
 {
     "name": "string-converter",
     "displayName": "Text Manipulator",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "icon": "images/icon.svg",
-    "description": "We know and love lodash. Why not use the string converting functions in vscode?",
+    "description": "Easily convert strings in your code with functions like camelCase, toUpper, replace, and many more.",
     "publisher": "adamwalzer",
     "author": {
         "name": "Adam Walzer"
@@ -34,8 +34,16 @@
                 "title": "Text Manipulator: capitalize"
             },
             {
+                "command": "constantCase",
+                "title": "Text Manipulator: constantCase"
+            },
+            {
                 "command": "deburr",
                 "title": "Text Manipulator: deburr"
+            },
+            {
+                "command": "dotCase",
+                "title": "Text Manipulator: dotCase"
             },
             {
                 "command": "escape",
@@ -58,12 +66,48 @@
                 "title": "Text Manipulator: lowerFirst"
             },
             {
+                "command": "pad",
+                "title": "Text Manipulator: pad"
+            },
+            {
+                "command": "padEnd",
+                "title": "Text Manipulator: padEnd"
+            },
+            {
+                "command": "padStart",
+                "title": "Text Manipulator: padStart"
+            },
+            {
                 "command": "parseInt",
                 "title": "Text Manipulator: parseInt"
             },
             {
+                "command": "pascalCase",
+                "title": "Text Manipulator: pascalCase"
+            },
+            {
+                "command": "pathCase",
+                "title": "Text Manipulator: pathCase"
+            },
+            {
+                "command": "repeat",
+                "title": "Text Manipulator: repeat"
+            },
+            {
+                "command": "replace",
+                "title": "Text Manipulator: replace"
+            },
+            {
                 "command": "snakeCase",
                 "title": "Text Manipulator: snakeCase"
+            },
+            {
+                "command": "spaceCase",
+                "title": "Text Manipulator: spaceCase"
+            },
+            {
+                "command": "split",
+                "title": "Text Manipulator: split"
             },
             {
                 "command": "startCase",
