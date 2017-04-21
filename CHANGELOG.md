@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to the "Text Manipulator" extension will be documented in this file.
 
+### [0.0.9]
+
+Fixing dotCase, pathCase, and spaceCase.
+
 ### [0.0.8]
 
 Adding a bunch more functions!

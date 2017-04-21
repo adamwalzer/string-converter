@@ -1,7 +1,7 @@
 {
     "name": "string-converter",
     "displayName": "Text Manipulator",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "icon": "images/icon.svg",
     "description": "Easily convert strings in your code with functions like camelCase, toUpper, replace, and many more.",
     "publisher": "adamwalzer",

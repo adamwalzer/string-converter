@@ -1,6 +1,6 @@
 # TEXT MANIPULATOR README
 
-Easily convert strings in your code with functions like camelCase, snakeCase, toUpper, and many more.
+Easily convert strings in your code with functions like camelCase, toUpper, replace, and many more.
 
 ![Alt text](images/demo.gif?raw=true "Demo Gif")
 
