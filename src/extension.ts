@@ -5,72 +5,104 @@ import {
     Range,
 } from 'vscode';
 
-const _ = require('lodash');
+import {
+    // string functions
+    camelCase,
+    capitalize,
+    deburr,
+    escape,
+    escapeRegExp,
+    kebabCase,
+    lowerCase,
+    lowerFirst,
+    pad,
+    padEnd,
+    padStart,
+    parseInt,
+    repeat,
+    replace,
+    snakeCase,
+    split,
+    startCase,
+    toLower,
+    toUpper,
+    trim,
+    trimEnd,
+    trimStart,
+    unescape,
+    upperCase,
+    upperFirst,
+    words,
 
-const STRING_FUNCTIONS = {
-    camelCase: _.camelCase,
-    capitalize: _.capitalize,
-    constantCase: s => _.toUpper(_.snakeCase(s)),
-    deburr: _.deburr,
-    dotCase: s => _.replace(_.kebabCase(s), '-', '.'),
-    escape: _.escape,
-    escapeRegExp: _.escapeRegExp,
-    kebabCase: _.kebabCase,
-    lowerCase: _.lowerCase,
-    lowerFirst: _.lowerFirst,
-    pad: _.pad,
-    padEnd: _.padEnd,
-    padStart: _.padStart,
-    parseInt: _.parseInt,
-    pascalCase: s => _.upperFirst(_.camelCase(s)),
-    pathCase: s => _.replace(_.kebabCase(s), '-', '/'),
-    repeat: _.repeat,
-    replace: _.replace,
-    snakeCase: _.snakeCase,
-    spaceCase: s => _.replace(_.kebabCase(s), '-', ' '),
-    split: _.split,
-    startCase: _.startCase,
-    toLower: _.toLower,
-    toUpper: _.toUpper,
-    trim: _.trim,
-    trimEnd: _.trimEnd,
-    trimStart: _.trimStart,
-    unescape: _.unescape,
-    upperCase: _.upperCase,
-    upperFirst: _.upperFirst,
-    words: _.words,
+    // useful helper functions
+    each,
+    partial,
+} from 'lodash';
+
+const stringFunctions = {
+    camelCase,
+    capitalize,
+    constantCase: s => toUpper(snakeCase(s)),
+    deburr,
+    dotCase: s => replace(kebabCase(s), '-', '.'),
+    escape,
+    escapeRegExp,
+    kebabCase,
+    lowerCase,
+    lowerFirst,
+    pad,
+    padEnd,
+    padStart,
+    parseInt,
+    pascalCase: s => upperFirst(camelCase(s)),
+    pathCase: s => replace(kebabCase(s), '-', '/'),
+    repeat,
+    replace,
+    snakeCase,
+    spaceCase: s => replace(kebabCase(s), '-', ' '),
+    split,
+    startCase,
+    toLower,
+    toUpper,
+    trim,
+    trimEnd,
+    trimStart,
+    unescape,
+    upperCase,
+    upperFirst,
+    words,
 };
 
-const GET_PARAM_FUNCTION = {
+const paramFunctions = {
     pad: resolve => {
         window.showInputBox({prompt: 'Length'})
-        .then(p => {
+        .then(l => {
             window.showInputBox({prompt: 'Chars'})
-            .then(r => {
-                resolve([p, r || " "]);
+            .then(c => {
+                resolve([l, c || " "]);
             })
         });
     },
     padEnd: resolve => {
         window.showInputBox({prompt: 'Length'})
-        .then(p => {
+        .then(l => {
             window.showInputBox({prompt: 'Chars'})
-            .then(r => {
-                resolve([p, r || " "]);
+            .then(c => {
+                resolve([l, c || " "]);
             })
         });
     },
     padStart: resolve => {
         window.showInputBox({prompt: 'Length'})
-        .then(p => {
+        .then(l => {
             window.showInputBox({prompt: 'Chars'})
-            .then(r => {
-                resolve([p, r || " "]);
+            .then(c => {
+                resolve([l, c || " "]);
             })
         });
     },
     repeat: resolve => {
-        window.showInputBox({prompt: 'n'})
+        window.showInputBox({prompt: 'Number of times to repeat'})
         .then(n => {
             resolve([n]);
         });
@@ -92,35 +124,41 @@ const GET_PARAM_FUNCTION = {
     }
 };
 
-const GET_PARAMS = function(name) {
-    let r;
-    let p = new Promise(resolve => {
-        r = params => {
+const getParams = function(name) {
+    let res;
+    const promise = new Promise(resolve => {
+        res = params => {
             resolve(params);
         };
     });
 
-    if (!GET_PARAM_FUNCTION[name]) {
-        r([]);
+    if (!paramFunctions[name]) {
+        res([]);
     } else {
-        GET_PARAM_FUNCTION[name](r);
+        paramFunctions[name](res);
     }
 
-    return p;
+    return promise;
 };
 
-const CONVERT_STRINGS = function(name) {
+const convertStrings = function(name) {
     const editor = window.activeTextEditor;
 
     if (!editor) return;
 
-    GET_PARAMS(name)
+    getParams(name)
     .then((params) => {
         editor.edit(editBuilder => {
-            _.each(editor.selections, selection => {
+            each(editor.selections, selection => {
                 editBuilder.replace(
                     selection,
-                    STRING_FUNCTIONS[name](editor.document.getText(new Range(selection.start, selection.end)), ...[].concat(params)).toString()
+                    stringFunctions[name](
+                        editor.document.getText(new Range(
+                            selection.start,
+                            selection.end
+                        )),
+                        ...[].concat(params)
+                    ).toString()
                 );
             });
         });
@@ -128,9 +166,9 @@ const CONVERT_STRINGS = function(name) {
 };
 
 export function activate(context: ExtensionContext) {
-    _.each(STRING_FUNCTIONS, (fn, name) => {
+    each(stringFunctions, (fn, name) => {
         context.subscriptions.push(
-            commands.registerCommand(name, _.partial(CONVERT_STRINGS, name))
+            commands.registerCommand(name, partial(convertStrings, name))
         );
     });
 }

@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to the "Text Manipulator" extension will be documented in this file.
 
+### [0.1.1]
+
+Just reformatting some code for easier maintenance.
+
 ### [0.1.0]
 
 Just updating the icon.
