@@ -27,15 +27,15 @@
         "commands": [
             {
                 "command": "camelCase",
-                "title": "Text Manipulator: camelCase"
+                "title": "Text Manipulator: camelCase (thisIsASampleText)"
             },
             {
                 "command": "capitalize",
-                "title": "Text Manipulator: capitalize"
+                "title": "Text Manipulator: capitalize (This is a sample text)"
             },
             {
                 "command": "constantCase",
-                "title": "Text Manipulator: constantCase"
+                "title": "Text Manipulator: constantCase (THIS_IS_A_SAMPLE_TEXT)"
             },
             {
                 "command": "deburr",
@@ -43,7 +43,7 @@
             },
             {
                 "command": "dotCase",
-                "title": "Text Manipulator: dotCase"
+                "title": "Text Manipulator: dotCase (this.is-a-sample-text)"
             },
             {
                 "command": "escape",
@@ -55,15 +55,15 @@
             },
             {
                 "command": "kebabCase",
-                "title": "Text Manipulator: kebabCase"
+                "title": "Text Manipulator: kebabCase (this-is-a-sample-text)"
             },
             {
                 "command": "lowerCase",
-                "title": "Text Manipulator: lowerCase"
+                "title": "Text Manipulator: lowerCase (this is a sample text)"
             },
             {
                 "command": "lowerFirst",
-                "title": "Text Manipulator: lowerFirst"
+                "title": "Text Manipulator: lowerFirst (this is a sample text)"
             },
             {
                 "command": "pad",
@@ -83,11 +83,11 @@
             },
             {
                 "command": "pascalCase",
-                "title": "Text Manipulator: pascalCase"
+                "title": "Text Manipulator: pascalCase (ThisIsASampleText)"
             },
             {
                 "command": "pathCase",
-                "title": "Text Manipulator: pathCase"
+                "title": "Text Manipulator: pathCase (this/is-a-sample-text)"
             },
             {
                 "command": "repeat",
@@ -99,11 +99,11 @@
             },
             {
                 "command": "snakeCase",
-                "title": "Text Manipulator: snakeCase"
+                "title": "Text Manipulator: snakeCase (this_is_a_sample_text)"
             },
             {
                 "command": "spaceCase",
-                "title": "Text Manipulator: spaceCase"
+                "title": "Text Manipulator: spaceCase (this is-a-sample-text)"
             },
             {
                 "command": "split",
@@ -111,7 +111,7 @@
             },
             {
                 "command": "startCase",
-                "title": "Text Manipulator: startCase"
+                "title": "Text Manipulator: startCase (This Is A Sample Text)"
             },
             {
                 "command": "toLower",
@@ -139,15 +139,15 @@
             },
             {
                 "command": "upperCase",
-                "title": "Text Manipulator: upperCase"
+                "title": "Text Manipulator: upperCase (THIS IS A SAMPLE TEXT)"
             },
             {
                 "command": "upperFirst",
-                "title": "Text Manipulator: upperFirst"
+                "title": "Text Manipulator: upperFirst (This is a sample text)"
             },
             {
                 "command": "words",
-                "title": "Text Manipulator: words"
+                "title": "Text Manipulator: words (this,is,a,sample,text)"
             }
         ]
     },
