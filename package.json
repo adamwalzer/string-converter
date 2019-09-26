@@ -1,7 +1,7 @@
 {
     "name": "string-converter",
     "displayName": "Text Manipulator",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "icon": "images/icon.png",
     "description": "Easily convert strings in your code with functions like camelCase, toUpper, replace, and many more.",
     "publisher": "adamwalzer",
@@ -26,128 +26,164 @@
     "contributes": {
         "commands": [
             {
+                "command": "showTextManipulatorMenu",
+                "title": "menu",
+                "category": "Text Manipulator"
+            },
+            {
                 "command": "camelCase",
-                "title": "Text Manipulator: camelCase"
+                "title": "camelCase          (`This is exämple tęxt` => `thisIsExampleText`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "capitalize",
-                "title": "Text Manipulator: capitalize"
+                "title": "capitalize          (`This is exämple tęxt` => `This is exämple tęxt`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "constantCase",
-                "title": "Text Manipulator: constantCase"
+                "title": "constantCase          (`This is exämple tęxt` => `THIS_IS_EXAMPLE_TEXT`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "deburr",
-                "title": "Text Manipulator: deburr"
+                "title": "deburr          (`This is exämple tęxt` => `This is example text`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "dotCase",
-                "title": "Text Manipulator: dotCase"
+                "title": "dotCase          (`This is exämple tęxt` => `this.is.example.text`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "escape",
-                "title": "Text Manipulator: escape"
+                "title": "escape          (`This is ex&mple tęxt` => `This is ex&amp;mple tęxt`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "escapeRegExp",
-                "title": "Text Manipulator: escapeRegExp"
+                "title": "escapeRegExp          (`[This is exämple tęxt]` => `\\[This is exämple tęxt\\]`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "kebabCase",
-                "title": "Text Manipulator: kebabCase"
+                "title": "kebabCase          (`This is exämple tęxt` => `this-is-example-text`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "lowerCase",
-                "title": "Text Manipulator: lowerCase"
+                "title": "lowerCase          (`This is exämple tęxt` => `this is example text`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "lowerFirst",
-                "title": "Text Manipulator: lowerFirst"
+                "title": "lowerFirst          (`This is exämple tęxt` => `this is exämple tęxt`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "pad",
-                "title": "Text Manipulator: pad"
+                "title": "pad          (`This is exämple tęxt`, 24, ~ => `~~This is exämple tęxt~~`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "padEnd",
-                "title": "Text Manipulator: padEnd"
+                "title": "padEnd          (`This is exämple tęxt`, 2, ~ => `This is exämple tęxt~~~~`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "padStart",
-                "title": "Text Manipulator: padStart"
+                "title": "padStart          (`This is exämple tęxt`, 24, ~ => `~~~~This is exämple tęxt`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "parseInt",
-                "title": "Text Manipulator: parseInt"
+                "title": "parseInt          (`11a` => `11`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "pascalCase",
-                "title": "Text Manipulator: pascalCase"
+                "title": "pascalCase          (`This is exämple tęxt` => `ThisIsExampleText`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "pathCase",
-                "title": "Text Manipulator: pathCase"
+                "title": "pathCase          (`This is exämple tęxt` => `this/is/example/text`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "repeat",
-                "title": "Text Manipulator: repeat"
+                "title": "repeat          (`tęxt`, 3 => `tęxttęxttęxt`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "replace",
-                "title": "Text Manipulator: replace"
+                "title": "replace          (`This is exämple tęxt`, This, this => `this is exämple tęxt`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "snakeCase",
-                "title": "Text Manipulator: snakeCase"
+                "title": "snakeCase          (`This is exämple tęxt` => `this_is_example_text`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "spaceCase",
-                "title": "Text Manipulator: spaceCase"
+                "title": "spaceCase          (`thisIsExampleText` => `this is example text`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "split",
-                "title": "Text Manipulator: split"
+                "title": "split          (`This is exämple tęxt`, e => `This is ,xämpl, tęxt`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "startCase",
-                "title": "Text Manipulator: startCase"
+                "title": "startCase          (`This is exämple tęxt` => `This Is Example Text`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "toLower",
-                "title": "Text Manipulator: toLower"
+                "title": "toLower          (`This is exämple tęxt` => `this is exämple tęxt`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "toUpper",
-                "title": "Text Manipulator: toUpper"
+                "title": "toUpper          (`This is exämple tęxt` => `THIS IS EXÄMPLE TĘXT`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "trim",
-                "title": "Text Manipulator: trim"
+                "title": "trim          (`  This is exämple tęxt  ` => `This is exämple tęxt`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "trimEnd",
-                "title": "Text Manipulator: trimEnd"
+                "title": "trimEnd          (`  This is exämple tęxt  ` => `  This is exämple tęxt`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "trimStart",
-                "title": "Text Manipulator: trimStart"
+                "title": "trimStart          (`  This is exämple tęxt  ` => `This is exämple tęxt  `)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "unescape",
-                "title": "Text Manipulator: unescape"
+                "title": "unescape          (`This is ex&amp;mple tęxt` => `This is ex&mple tęxt`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "upperCase",
-                "title": "Text Manipulator: upperCase"
+                "title": "upperCase          (`This is exämple tęxt` => `THIS IS EXAMPLE TEXT`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "upperFirst",
-                "title": "Text Manipulator: upperFirst"
+                "title": "upperFirst          (`this is exämple tęxt` => `This is exämple tęxt`)",
+                "category": "Text Manipulator"
             },
             {
                 "command": "words",
-                "title": "Text Manipulator: words"
+                "title": "words          (`This is exämple text` => `This,is,exämple,text`)",
+                "category": "Text Manipulator"
             }
         ]
     },

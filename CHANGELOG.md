@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to the "Text Manipulator" extension will be documented in this file.
 
+### [0.1.2]
+
+Adding previews for each command. Adding a menu that shows live previews. Making it possible to open the menu by adding a shortcut for showTextManipulatorMenu.
+
 ### [0.1.1]
 
 Just reformatting some code for easier maintenance.

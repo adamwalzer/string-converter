@@ -35,6 +35,7 @@ import {
     words,
 
     // useful helper functions
+    map,
     each,
     partial,
 } from 'lodash';
@@ -44,7 +45,7 @@ const stringFunctions = {
     capitalize,
     constantCase: s => toUpper(snakeCase(s)),
     deburr,
-    dotCase: s => replace(kebabCase(s), '-', '.'),
+    dotCase: s => replace(kebabCase(s), /-/g, '.'),
     escape,
     escapeRegExp,
     kebabCase,
@@ -55,11 +56,11 @@ const stringFunctions = {
     padStart,
     parseInt,
     pascalCase: s => upperFirst(camelCase(s)),
-    pathCase: s => replace(kebabCase(s), '-', '/'),
+    pathCase: s => replace(kebabCase(s), /-/g, '/'),
     repeat,
     replace,
     snakeCase,
-    spaceCase: s => replace(kebabCase(s), '-', ' '),
+    spaceCase: s => replace(kebabCase(s), /-/g, ' '),
     split,
     startCase,
     toLower,
@@ -165,12 +166,31 @@ const convertStrings = function(name) {
     });
 };
 
+const showTextManipulatorMenu = () => {
+    const editor = window.activeTextEditor;
+    const selection = editor.selections[0];
+    const text = editor.document.getText(new Range(selection.start, selection.end));
+
+    if (!editor || !text) return;
+
+    const opts = map(stringFunctions, (fn, name) => `${name} - ${fn(text)}`);
+
+    window.showQuickPick(opts)
+        .then((option) => {
+            convertStrings(option.split(' ')[0]);
+        });
+};
+
 export function activate(context: ExtensionContext) {
     each(stringFunctions, (fn, name) => {
         context.subscriptions.push(
-            commands.registerCommand(name, partial(convertStrings, name))
+            commands.registerTextEditorCommand(name, partial(convertStrings, name))
         );
     });
+
+    context.subscriptions.push(
+        commands.registerCommand('showTextManipulatorMenu', showTextManipulatorMenu)
+    );
 }
 
 export function deactivate() {}
